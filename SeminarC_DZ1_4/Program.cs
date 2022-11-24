@@ -12,7 +12,7 @@ Console.WriteLine("Введите целое число");
 
 vvod = Convert.ToInt32(Console.ReadLine());
 
-while (count < vvod)
+while (count < (vvod + 1))
 {
     if ((count % 2) == 0)
     {
