@@ -9,6 +9,6 @@ Console.Clear();
 Console.WriteLine("Введите Трехзначное число: ");
 int num1 = int.Parse(Console.ReadLine());
 
-int result = (num1 % 100 - num1%10)/10;
+int result = (num1 % 100 - num1 % 10) / 10;
 
 Console.Write($"Вторая цифра в числе: {result}");
