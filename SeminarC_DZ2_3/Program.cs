@@ -4,9 +4,16 @@
 //32679 -> 6
 
 Console.Clear();
-string str = Console.ReadLine(); 
-    
+string str = (Console.ReadLine() ?? "1");
+
 char[] ch = str.ToCharArray();
 
-Console.WriteLine(ch [2]);
-        
+int length = ch.Length;
+Console.WriteLine("Length is " + length);
+
+if (length > 2)
+
+    Console.WriteLine(ch[2]);
+
+else
+    Console.WriteLine("третьей цифры нет");
