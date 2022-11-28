@@ -4,16 +4,9 @@
 //32679 -> 6
 
 Console.Clear();
+string str = Console.ReadLine(); 
+    
+char[] ch = str.ToCharArray();
 
-Console.WriteLine("Введите число: ");
-int num1 = int.Parse(Console.ReadLine());
-
-decimal ost = num1 / 1000;
-
-if (ost < 1)
-    Console.WriteLine("третьей цифры нет");
-else
-{
-    int result = (num1 % 1000 - num1 % 100) / 100;
-    Console.WriteLine($"Третья цифра: {result}");
-}
+Console.WriteLine(ch [2]);
+        
