@@ -19,5 +19,5 @@ int exp = 3; // можно запросить ввод этого парамет
 for (int i = startnumber; i <= finishnumber; i++)
 {
     double result = Exponent(i, exp);
-    Console.WriteLine(result);
+    Console.WriteLine($"Число {i} в 3 степени = {result}");
 }
