@@ -2,7 +2,7 @@
 //int i = 6;
 
 Console.Write("Введите число: ");
-string numstring = (Console.ReadLine());
+string numstring = (Console.ReadLine() ?? " ");
 int i = 0;
 int num;
 int num1=0;
