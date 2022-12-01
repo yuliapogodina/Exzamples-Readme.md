@@ -8,16 +8,16 @@ double Exponent(int number, int x)
     return a;
 }
 
-Console.Write("Введите число 1:");
+Console.Write("Введите число 1: ");
 int startnumber = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите число 2, больше предыдущего:");
+Console.Write("Введите число 2, больше предыдущего: ");
 int finishnumber = Convert.ToInt32(Console.ReadLine());
 
 int exp = 3; // можно запросить ввод этого параметра
-int i;
-for (i = startnumber; i <= finishnumber; i++)
+
+for (int i = startnumber; i <= finishnumber; i++)
 {
-   double result = Exponent(i, exp);
-   Console.WriteLine(result);
+    double result = Exponent(i, exp);
+    Console.WriteLine(result);
 }
