@@ -1,21 +1,37 @@
-﻿Console.WriteLine("Введите число 1: ");
-int x = Convert.ToInt32(Console.ReadLine() ?? "");
-Console.WriteLine("Введите число 2 > 1-го: ");
-int y = Convert.ToInt32(Console.ReadLine() ?? "");
+﻿//Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+//[1 2 3 4 5] -> 5 8 3
+//[6 7 3 6] -> 36 21
 
-Console.WriteLine($"Произведение чисел от {x} до {y} = {GetProductNumbers(x, y)}");
+Console.Clear();
 
-int GetProductNumbers(int a, int b)
+int[] array = FillArray(5, 0, 10);
+int[] array2 = FindProductElementArray(array);
+
+Console.WriteLine($"Получившийся массив: [{string.Join(",", array)}]");
+Console.WriteLine($"Получившийся массив: [{string.Join(",", array2)}]");
+
+int[] FillArray(int sizeArray, int minValue, int maxValue)
 {
-    int result = 1;
-    for (int i = a; i <= b; i++)
+    Random random = new Random();
+    int[] resultArray = new int[sizeArray];
+    for (int i = 0; i < resultArray.Length; i++)
     {
-        result = result * i;
+        resultArray[i] = random.Next(minValue, maxValue + 1);
     }
-    return result;
+    return resultArray;
 }
 
-
-//Задача 28: Напишите программу, которая принимает на вход число M и N и выдаёт произведение чисел от M до N.
-//2,4 -> 24 
-//1,5 -> 120
+int[] FindProductElementArray(int[] inputarray)
+{
+    int k = (inputarray.Length % 2 == 0 ? k = inputarray.Length / 2 : k = inputarray.Length / 2 + 1);
+    int[] outArray = new int[k];
+    if (inputarray.Length % 2 != 0) outArray[k] = inputarray[k];
+    int i = inputarray.Length;
+   for (int j = 0; j < k; j++)
+   {
+        outArray[j] = inputarray[j] * inputarray[i - j];
+       j++;
+        Console.Write(outArray[j]);
+    }
+    return outArray;
+}
