@@ -23,7 +23,7 @@ double[] FillArray(int sizeArray, int minValue, int maxValue)
     double[] resultArray = new double[sizeArray];
     for (int i = 0; i < resultArray.Length; i++)
     {
-        resultArray[i] = random.Next(minValue, maxValue + 1);
+        resultArray[i] = random.NextDouble()*100;
     }
     return resultArray;
 }
