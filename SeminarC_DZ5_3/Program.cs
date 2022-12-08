@@ -6,18 +6,12 @@ Console.Clear();
 Console.WriteLine("Введите размерность массива");
 int size = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите минимальное допустимое значение в массиве");
-int min = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Введите максимальное допустимое значение в массиве");
-int max = Convert.ToInt32(Console.ReadLine());
-
-double[] array = FillArray(size, min, max);
+double[] array = FillArray(size);
 Console.WriteLine($"Получившийся массив: [{string.Join(",", array)}]");
 Console.WriteLine($"Максимальное и минимальное значениями массива: {FindMinAndMaxByArray(array).Item2} и {FindMinAndMaxByArray(array).Item1}");
 Console.WriteLine($"Разница между максимальным и минимальным значениями = {FindMinAndMaxByArray(array).Item2 - FindMinAndMaxByArray(array).Item1}");
 
-double[] FillArray(int sizeArray, int minValue, int maxValue)
+double[] FillArray(int sizeArray)
 {
     Random random = new Random();
     double[] resultArray = new double[sizeArray];
