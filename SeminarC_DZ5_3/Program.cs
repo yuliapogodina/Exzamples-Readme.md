@@ -17,7 +17,8 @@ double[] FillArray(int sizeArray)
     double[] resultArray = new double[sizeArray];
     for (int i = 0; i < resultArray.Length; i++)
     {
-        resultArray[i] = random.NextDouble()*100;
+        //resultArray[i] = random.NextDouble()*100;
+        resultArray[i] = Math.Round(random.NextDouble()*random.Next(-1000, 1001), 0);
     }
     return resultArray;
 }
