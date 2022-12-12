@@ -5,11 +5,11 @@
 Console.Clear();
 Console.WriteLine("Введите несколько чисел через пробел");
 
-string text = Console.ReadLine();
+string text = Convert.ToString(Console.ReadLine() ?? " ");
 
 int GetCountPositiveNumbers(string stringOfNumbers)
 {
-    string[] words = text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+    string[] words = stringOfNumbers.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
     int i = 0;
     int number;
     foreach (string s in words)
