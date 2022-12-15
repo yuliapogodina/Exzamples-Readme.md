@@ -15,16 +15,15 @@ int sizeColumns = Convert.ToInt32(Console.ReadLine());
 double[,] array = FillArray(sizeRows, sizeColumns);
 
 PrintArray(array);
-//Console.WriteLine($"Получившийся массив: [{string.Join(",", array)}]");
 
 double[,] FillArray(int sizei, int sizej)
 {
     Random random = new Random();
-    double[,] resultArray = new double[sizei,sizej];
+    double[,] resultArray = new double[sizei, sizej];
     for (int i = 0; i < sizei; i++)
     {
         for (int j = 0; j < sizej; j++)
-        resultArray[i,j] = Math.Round(random.NextDouble()*random.Next(-100, 101), 1);
+            resultArray[i, j] = Math.Round(random.NextDouble() * random.Next(-100, 101), 1);
     }
     return resultArray;
 }
@@ -35,6 +34,7 @@ void PrintArray(double[,] inputArray)
     {
         for (int j = 0; j < inputArray.GetLength(1); j++)
         {
+            //определить длину элемента и затем через свитч кэйс добавлять пробелы
             Console.Write(inputArray[i, j] + " ");
         }
         Console.WriteLine();
