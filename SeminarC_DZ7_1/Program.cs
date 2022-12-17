@@ -34,8 +34,7 @@ void PrintArray(double[,] inputArray)
     {
         for (int j = 0; j < inputArray.GetLength(1); j++)
         {
-            //определить длину элемента и затем через свитч кэйс добавлять пробелы
-            Console.Write(inputArray[i, j] + " ");
+            Console.Write($"|" + inputArray[i, j] + "\t");
         }
         Console.WriteLine();
     }
