@@ -9,8 +9,8 @@
 
 Console.Clear();
 Random random = new Random();
-int sizeRows = random.Next(1, 10);
-int sizeColumns = random.Next(1, 10);
+int sizeRows = random.Next(2, 10);
+int sizeColumns = random.Next(2, 10);
 
 Console.WriteLine("Введите номер строки массива от 0 до 9:");
 int elementRow = Convert.ToInt32(Console.ReadLine());
@@ -39,7 +39,6 @@ double[,] FillArray(int sizei, int sizej)
 
 void PrintArray(double[,] inputArray)
 {
-    string s;
     Console.WriteLine();
     for (int i = 0; i < inputArray.GetLength(0); i++)
     {
